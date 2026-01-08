@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+}
+button {
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+}
+.hidden {
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="one">
+<h1>Hey Baby❤️</h1>
+<p>You’ve made my days brighter just by being in them like the queen you are.</p>
+<button onclick="next()">Continue 💕</button>
+</div>
+
+<div class="card hidden" id="two">
+<h1>One Question 💌</h1>
+<p>Will you be my Valentine?</p>
+  <p>We can go on infinite gaming and food dates 😚</p>
+<button onclick="yes()">YES 💖</button><br><br>
+<button onclick="yes()">Of course 😘</button>
+</div>
+
+<div class="card hidden" id="three">
+<h1>YAY 🎉💖</h1>
+<p>You just made me the happiest person ever😭</p>
+  <p>I LOVE YOU SO MUCH BABY😭</p>
+</div>
+
+<script>
+function next(){
+  one.classList.add("hidden");
+  two.classList.remove("hidden");
+}
+function yes(){
+  two.classList.add("hidden");
+  three.classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
