@@ -19,21 +19,31 @@ body {
     color: white;
     text-align: center;
 }
+
 .card {
     background: rgba(255,255,255,0.15);
-    padding: 30px;
+    padding: 25px;
     border-radius: 20px;
     width: 90%;
+    max-width: 400px;
 }
+
+img {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
 button {
     margin-top: 20px;
-    padding: 15px 25px;
+    padding: 14px 25px;
     font-size: 18px;
     border: none;
     border-radius: 30px;
     background: #ff4d6d;
     color: white;
 }
+
 .hidden {
     display: none;
 }
@@ -42,24 +52,34 @@ button {
 
 <body>
 
+<!-- SCREEN 1 -->
 <div class="card" id="one">
-<h1>Hey Baby❤️</h1>
-<p>You’ve made my days brighter just by being in them like the queen you are.</p>
-<button onclick="next()">Continue 💕</button>
+  <h1>Hi Shania ❤️</h1>
+  <p>You’ve made my days brighter just by being in them.</p>
+
+  <!-- SCREEN 1 GIF -->
+  <img src="https://tenor.com/rUq2BzRuFYw.gif">
+
+  <button onclick="next()">Continue 💕</button>
 </div>
 
+<!-- SCREEN 2 -->
 <div class="card hidden" id="two">
-<h1>One Question 💌</h1>
-<p>Will you be my Valentine?</p>
-  <p>We can go on infinite gaming and food dates 😚</p>
-<button onclick="yes()">YES 💖</button><br><br>
-<button onclick="yes()">Of course 😘</button>
+  <h1>One Question 💌</h1>
+  <p>Will you be my Valentine?</p>
+    <img src="https://tenor.com/bb8QN.gif">
+
+  <button onclick="yes()">YES 💖</button><br><br>
+  <button onclick="yes()">Of course 😘</button>
 </div>
 
+<!-- SCREEN 3 -->
 <div class="card hidden" id="three">
-<h1>YAY 🎉💖</h1>
-<p>You just made me the happiest person ever😭</p>
-  <p>I LOVE YOU SO MUCH BABY😭</p>
+  <h1>YAY 🎉💖</h1>
+  <p>You just made me the happiest person.</p>
+
+  <!-- SCREEN 3 GIF -->
+  <img src="https://tenor.com/mBZ1QdxNf0q.gif">
 </div>
 
 <script>
@@ -67,6 +87,7 @@ function next(){
   one.classList.add("hidden");
   two.classList.remove("hidden");
 }
+
 function yes(){
   two.classList.add("hidden");
   three.classList.remove("hidden");
